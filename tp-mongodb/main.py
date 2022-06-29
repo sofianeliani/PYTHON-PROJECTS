@@ -19,7 +19,8 @@ menu_options = {
     1: 'Initialize database with mongoDB',
     2: 'View Graphic Data',
     3: 'View Console Data',
-    4: 'Exit',
+    4: 'Ajpouter un vehicule',
+    5: 'Exit',
 }
 
 def print_menu():
@@ -70,6 +71,19 @@ def option3():
         # print(car['puissance'])
     print(y)
     print(x)
+def option4():
+    def add_car(numero, modele, cylindree, puissance, poids, conso):
+        document = {
+            'numero': numero,
+            'modele': modele,
+            'cylindree': cylindree,
+            'puissance': puissance,
+            'poids': poids,
+            'conso': conso,
+            'Date Added': datetime.datetime.now()
+        }
+        return cars.insert_one(document)
+    add_car(1, "Test add car", 00.00, 00.00, 00.00, 00.00)
 
 if __name__=='__main__':
     while(True):
@@ -87,6 +101,8 @@ if __name__=='__main__':
         elif option == 3:
             option3()
         elif option == 4:
+            option4()
+        elif option == 5:
             print('Good job Bernard ;)')
             exit()
         else:
@@ -107,17 +123,7 @@ if __name__=='__main__':
 
 
 
-def add_car(numero, modele, cylindree, puissance, poids, conso):
-    document = {
-        'numero': numero,
-        'modele': modele,
-        'cylindree': cylindree,
-        'puissance': puissance,
-        'poids': poids,
-        'conso': conso,
-        'Date Added': datetime.datetime.now()
-    }
-    return cars.insert_one(document)
+
 
 
 
