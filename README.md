@@ -41,7 +41,7 @@ Ces dernières années, des milliards d’euros ont été dépensés pour achete
 ## Mon projet Blender associé à un script Python
 
 1 - Installer blender
->tp-blender > 1 - Installateur blender
+>https://www.blender.org/download/
 
 2 - Ouvrir le fichier Fox.blend
 >tp-blender > sources > mesh
